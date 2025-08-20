@@ -41,7 +41,7 @@ cp -f $GITHUB_WORKSPACE/config/immortalwrt/99-default-settings package/emortal/d
 
 # 定制golang版本 1.23.0 Alist3.36.0 go >=1.22.4
 rm -rf feeds/packages/lang/golang
-git clone https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang
+git clone https://github.com/sbwml/packages_lang_golang -b 24.x feeds/packages/lang/golang
 
 
 ### 第三方应用安装 ###
