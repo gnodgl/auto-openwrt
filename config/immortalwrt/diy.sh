@@ -102,7 +102,7 @@ sed -i 's,frp 客户端,Frp 客户端,g' feeds/luci/applications/luci-app-frpc/p
 sed -i 's/nas/services/g' feeds/luci/applications/luci-app-samba4/root/usr/share/luci/menu.d/luci-app-samba4.json
 
 # Aria2菜单调整到服务
-sed -i 's/nas/services/g' feeds/luci/applications/luci-app-aria2/root/usr/share/luci/menu.d/luci-app-aria2.json
+#sed -i 's/nas/services/g' feeds/luci/applications/luci-app-aria2/root/usr/share/luci/menu.d/luci-app-aria2.json
 
 # statistics菜单调整到系统下
 #sed -i 's/\/statistics/\/status&/;s/80/99/' feeds/luci/applications/luci-app-statistics/root/usr/share/luci/menu.d/luci-app-statistics.json
