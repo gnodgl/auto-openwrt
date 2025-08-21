@@ -37,7 +37,8 @@ sed -i 's|/bin/login|/bin/login -f root|g' feeds/packages/utils/ttyd/files/ttyd.
 
 # 修改系统信息
 cp -f $GITHUB_WORKSPACE/banner package/base-files/files/etc/banner
-#cp -f $GITHUB_WORKSPACE/config/immortalwrt/1000-default-settings package/emortal/default-settings/files/1000-default-settings
+cp -f $GITHUB_WORKSPACE/config/immortalwrt/1000-default-settings package/emortal/default-settings/files/1000-default-settings
+chmod +x package/emortal/default-settings/files/1000-default-settings
 
 # 定制golang版本 1.23.0 Alist3.36.0 go >=1.22.4
 rm -rf feeds/packages/lang/golang
