@@ -19,6 +19,7 @@ on:
         type: choice
         options:
           - openwrt-23.05
+          - openwrt-24.10
           - master
 
 
@@ -28,7 +29,7 @@ env:
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: ${{inputs.CONFIG}}
   CLASH_KERNEL: amd64
-  DIY_SH: ${{inputs.VERSION=='master' && 'master.sh' || 'diy.sh'}}
+  DIY_SH: diy.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: false
@@ -94,7 +95,6 @@ jobs:
         cd openwrt
         $GITHUB_WORKSPACE/config/immortalwrt/$DIY_SH
         $GITHUB_WORKSPACE/scripts/preset-clash-core.sh $CLASH_KERNEL
-#        $GITHUB_WORKSPACE/scripts/preset-adguard-core.sh $CLASH_KERNEL
 
     - name: Download package
       id: package

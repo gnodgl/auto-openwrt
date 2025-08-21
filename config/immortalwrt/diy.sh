@@ -45,31 +45,6 @@ git clone https://github.com/sbwml/packages_lang_golang -b 24.x feeds/packages/l
 
 
 ### 第三方应用安装 ###
-# Alist
-#rm -rf feeds/packages/net/alist
-#rm -rf feeds/luci/applications/luci-app-alist
-#git clone https://github.com/sbwml/luci-app-alist  package/alist
-
-# SmartDNS
-#rm -rf feeds/packages/net/smartdns
-#git clone --depth=1 https://github.com/pymumu/luci-app-smartdns package/luci-app-smartdns
-#git clone --depth=1 https://github.com/pymumu/openwrt-smartdns package/smartdns
-
-# adguardhome
-#git clone -b 2023.10 --depth 1 https://github.com/XiaoBinin/luci-app-adguardhome package/luci-app-adguardhome
-#ln -s package/luci-app-adguardhome/po/zh-cn package/luci-app-adguardhome/po/zh_Hans
-
-# 科学上网插件
-# git clone --depth=1 -b main https://github.com/fw876/helloworld package/luci-app-ssr-plus
-# svn export https://github.com/haiibo/packages/trunk/luci-app-vssr package/luci-app-vssr
-# git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall
-# svn export https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall package/luci-app-passwall
-# svn export https://github.com/xiaorouji/openwrt-passwall2/trunk/luci-app-passwall2 package/luci-app-passwall2
-
-# netdata
-#rm -rf feeds/luci/applications/luci-app-netdata
-#git clone --depth=1 https://github.com/gnodgl/luci-app-netdata package/luci-app-netdata
-
 # OpenClash
 merge_package master https://github.com/vernesong/OpenClash package luci-app-openclash
 
@@ -89,24 +64,18 @@ git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config package/l
 # 在线用户
 git clone --depth=1 https://github.com/gnodgl/luci-app-onliner package/luci-app-onliner
 
-
-### 菜单调整 ###
-# nlbwmon带宽监控调整菜单位置到网络
-#sed -i 's/services/network/g' feeds/luci/applications/luci-app-nlbwmon/root/usr/share/luci/menu.d/luci-app-nlbwmon.json
-#sed -i 's/services/network/g' feeds/luci/applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js
-
 # Frpc菜单名修改
 sed -i 's,frp 客户端,Frp 客户端,g' feeds/luci/applications/luci-app-frpc/po/zh_Hans/frpc.po
 
 # Samba4菜单调整至服务
 sed -i 's/nas/services/g' feeds/luci/applications/luci-app-samba4/root/usr/share/luci/menu.d/luci-app-samba4.json
 
-# Aria2菜单调整到服务
-#sed -i 's/nas/services/g' feeds/luci/applications/luci-app-aria2/root/usr/share/luci/menu.d/luci-app-aria2.json
+# UPnP菜单名修改
+#sed -i 's,UPnP IGD 和 PCP\/NAT-PMP 服务,通用即插即用（UPnP）,g' feeds/luci/applications/luci-app-upnp/po/zh_Hans/upnp.po
+#sed -i 's,UPnP IGD & PCP\/NAT-PMP,UPnP,g' feeds/luci/applications/luci-app-upnp/root/usr/share/luci/menu.d/luci-app-upnp.json
 
-# statistics菜单调整到系统下
-#sed -i 's/\/statistics/\/status&/;s/80/99/' feeds/luci/applications/luci-app-statistics/root/usr/share/luci/menu.d/luci-app-statistics.json
-
+# vlmcsd菜单名修改
+sed -i 's,Vlmcsd KMS 服务器\/KMS 服务器,g' feeds/luci/applications/luci-app-vlmcsd/po/zh_Hans/vlmcsd.po
 
 ### 主题定制 ###
 # Argon主题定制
