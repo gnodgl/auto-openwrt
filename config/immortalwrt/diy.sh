@@ -37,7 +37,7 @@ sed -i 's|/bin/login|/bin/login -f root|g' feeds/packages/utils/ttyd/files/ttyd.
 
 # 修改系统信息
 cp -f $GITHUB_WORKSPACE/banner package/base-files/files/etc/banner
-cp -f $GITHUB_WORKSPACE/config/immortalwrt/1000-default-settings package/emortal/default-settings/files/1000-default-settings
+#cp -f $GITHUB_WORKSPACE/config/immortalwrt/1000-default-settings package/emortal/default-settings/files/1000-default-settings
 
 # 定制golang版本 1.23.0 Alist3.36.0 go >=1.22.4
 rm -rf feeds/packages/lang/golang
@@ -75,7 +75,7 @@ sed -i 's/nas/services/g' feeds/luci/applications/luci-app-samba4/root/usr/share
 #sed -i 's,UPnP IGD & PCP\/NAT-PMP,UPnP,g' feeds/luci/applications/luci-app-upnp/root/usr/share/luci/menu.d/luci-app-upnp.json
 
 # vlmcsd菜单名修改
-sed -i 's,Vlmcsd KMS 服务器\/KMS 服务器,g' feeds/luci/applications/luci-app-vlmcsd/po/zh_Hans/vlmcsd.po
+sed -i 's,Vlmcsd KMS 服务器,KMS 服务器,g' feeds/luci/applications/luci-app-vlmcsd/po/zh_Hans/vlmcsd.po
 
 ### 主题定制 ###
 # Argon主题定制
