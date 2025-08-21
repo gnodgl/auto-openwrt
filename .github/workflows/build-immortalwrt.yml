@@ -92,6 +92,8 @@ jobs:
         mv $GITHUB_WORKSPACE/config/immortalwrt/$CONFIG_FILE openwrt/.config
         chmod +x $GITHUB_WORKSPACE/scripts/*.sh
         chmod +x $GITHUB_WORKSPACE/config/immortalwrt/$DIY_SH
+        [ -e openwrt/files/etc/uci-defaults ] && chmod +x -R openwrt/files/etc/uci-defaults/
+        [ -e openwrt/files/etc/uci-defaults ] && ls -l openwrt/files/etc/uci-defaults/
         cd openwrt
         $GITHUB_WORKSPACE/config/immortalwrt/$DIY_SH
         $GITHUB_WORKSPACE/scripts/preset-clash-core.sh $CLASH_KERNEL
